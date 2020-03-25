@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructuras de control en JavaScript</title>
+</head>
+<body>
+    <!--1. CONDICIONALES-->
+
+        <!--1.1 IF / ELSE-->
+            <script> 
+                function acceso () {
+                    var edad = prompt("Por favor, introduce tu edad");
+                        if (edad >= 18){
+                            alert("¡Bienvenido!");
+                        }
+                        else {
+                            alert("Lo sentimos, debes tener 18 años para acceder a esta página")
+                        }
+                }
+                acceso();
+            </script>
+        <!--Para operaciones sencillas, recuerda que existe el operador ternario, que nos facilitará la realización de estas operaciones: El ejemplo anterior quedaría:
+        <script>
+            var edad =  prompt("Por favor, introduce tu edad");
+            var acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 18 años para acceder a esta página";
+            alert(acceder);        
+        </script>-->
+
+        <!--1.2 SWITCH
+        Sentencia utilizada en casos de multiples condiciones.-->
+            <script>
+              var note = 3;
+              var resultado = " ";
+                switch (note){
+                    case 0:
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                        resultado = "Lo sentimos, has suspendido";
+                        break;
+                    case 5:
+                        resultado = "Suficiente";
+                        break;
+                    case 6:
+                        resultado = "Bien";
+                        break;
+                    case 7:
+                    case 8:
+                        resultado = "Notable";
+                        break;
+                    case 9:
+                    case 10:
+                        resultado = "Sobresaliente";
+                        break;
+                    default:
+                        resultado = "La nota indicada no es correcta";
+                }
+                alert(resultado);
+            </script>
+
+
+    <!-- 2. REPETICIONES-->
+
+        <!--2.1 FOR-->
+            <script>
+                var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                for (var i=0; i <books.length; i++){
+                    alert(books[i]);
+                }
+            </script>
+            <!--Es importante no olvidar ninguna de las tres sentencias, dentro del bucle for o fuera cada una de ellas tiene que aparecer: 
+                1. Inicializando la variable con un valor fuera del bucle:
+                    var i = 0;
+                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    for ( ;<books.length; i++){
+                        alert(books[i]);
+                    }
+
+                2. Hasta cuándo tiene que recorrer el bucle
+                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    for (var i=0; ; i++){
+                        if (i == books.length){
+                            break;
+                        }
+                    alert(books[i]);
+                    }
+                
+                3. Sentencia para incrementar la variable fuera del bucle for
+                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    for (var i=0; i <books.length; ){
+                        alert(books[i]);
+                        i++;
+                    } -->
+                
+         
+            <!--2.1.1 FOR IN
+            Sentencia para movernos por un objeto-->
+            <script>
+                var author = {name: "J. R. R. Tolkien", born: 1892, book: "The Hobbit"};
+                var propiedad;
+                for (propiedad in author) {
+                    alert(author[propiedad]);
+                } 
+            </script>
+
+        <!--2.2 WHILE
+        Se ejecutará hasta que la condición deje de ser cierta. Es necesario incluir por tanto una condición para salir del bucle o este será infinito-->
+            <script>
+                var clave = "Abracadabra";
+                var claveUser = prompt ("Escribe tu contraseña");
+                    while
+                        (clave != claveUser){
+                            alert("Contraseña incorrecta");
+                            claveUser = prompt ("Escribe tu contraseña");
+                        }
+                    (clave == claveUser);
+                    alert("Bienvenido");
+            </script>
+</body>
+</html>
