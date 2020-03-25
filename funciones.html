@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones en JavaScript</title>
+</head>
+<body>
+    <!--SINTAXIS-->
+
+    <!--1. FUNCIÓN SIN PARÁMETROS-->
+        <script> 
+            function saludar () { // Nombre de la función «saludar»
+            alert("¡Hola, mundo!");
+            }
+            saludar(); // Invocamos a la función
+        </script>
+
+
+    <!--2. FUNCIÓN CON PARÁMETROS-->
+        <script>
+            function multiplicar (a, b){
+                return a * b;
+            }
+            var resultado = multiplicar (3, 4);
+            alert (resultado);
+        </script>
+
+    <!--Explicación paso a paso: 
+    La función «multiplicar» tiene dos parámetros: «a» y «b».
+    Utilizamos la palabra reservada «return» para que nos devuelva el dato.
+    Asignamos la operación a una variable, en este ejemplo «var resultado», dondponemos entre paréntesis los argumentos.
+    Finalmente invocamos a la función con el nombre de la variable «resultado».
+    
+    También podemos hacerlo con «alert(multiplicar(3, 4));» en cuyo caso nosaltaremos el paso anterior de asignar la operación a una variable.-->
+
+
+        <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO
+        Si solo ponemos un argumento, el resultado daría NaN,resolvemos esto dando valor«0» al segundo parámetro cuando este no esté definido.-->
+            <script>
+                function sumar (a, b){
+                    if (b === undefined){
+                        b = 0;
+                    }
+                    return a + b;
+                }
+                alert(sumar(4));
+            </script>
+
+        
+        <!--FUNCIÓN CON PARÁMETROS POR EXCESO
+        En este caso, tendremos más argumentos de los que han sido declarados en los parámetros. Para mostrarlos usamos «arguments.length»-->
+            <script>
+                function days (){
+                    alert(arguments.length); //Obtendremos el número de argumentos
+                    for (var i=0; i < arguments.length; i++){
+                    alert ("El argumento " + (i+1) + " es: " + arguments[i]);     
+                    } //Recorremos cada uno de los argumentos
+                }
+                days ("lunes", "martes", "jueves");
+            </script>
+         
+
+
+    <!--3. FUNCIÓN ANÓNIMA -->
+        <script>
+            var restar = function (e, f){ // Definimos una variable para después poder invocar a la función
+                return e - f;
+            };
+            alert(restar(9, 4));
+        </script>
+
+        <!--3. 1 FUNCIÓN ANÓNIMA AUTODECLARADA-->
+            <script>
+                (function () {alert("¡Hola, mundo!");}()); // pondremos entre paréntesis la función. No olvidar los paréntesis después de cerrar la llave de la función.
+            </script>
+</body>
+</html>
