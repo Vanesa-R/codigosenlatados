@@ -21,7 +21,21 @@
                 }
                 acceso();
             </script>
-        <!--Para operaciones sencillas, recuerda que existe el operador ternario, que nos facilitará la realización de estas operaciones: El ejemplo anterior quedaría:
+
+            <script>
+                var usuario = prompt("Introduce tu nombre de usuario");
+                if (usuario && usuario.trim()){
+                    var confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
+                    if (confirmar){
+                        alert("El nombre de usuario es correcto");
+                    } else {
+                        alert("El nombre de usuario es incorrecto");
+                    }
+                } else {
+                    alert("No has introducido ningún nombre");
+                }
+            </script>
+        <!--Para operaciones sencillas, recuerda que existe el operador ternario, que nos facilitará la realización de estas operaciones: El primer ejemplo quedaría:
         <script>
             var edad =  prompt("Por favor, introduce tu edad");
             var acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 18 años para acceder a esta página";
