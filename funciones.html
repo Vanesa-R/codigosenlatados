@@ -6,7 +6,6 @@
     <title>Funciones en JavaScript</title>
 </head>
 <body>
-    <!--SINTAXIS-->
 
     <!--1. FUNCIÓN SIN PARÁMETROS-->
         <script> 
@@ -36,10 +35,9 @@
     <!--Explicación paso a paso: 
     La función «multiplicar» tiene dos parámetros: «a» y «b».
     Utilizamos la palabra reservada «return» para que nos devuelva el dato.
-    Asignamos la operación a una variable, en este ejemplo «var resultado», dondponemos entre paréntesis los argumentos.
+    Asignamos la operación a una variable, en este ejemplo «var resultado», donde ponemos entre paréntesis los argumentos.
     Finalmente invocamos a la función con el nombre de la variable «resultado».
-    
-    También podemos hacerlo con «alert(multiplicar(3, 4));» en cuyo caso nosaltaremos el paso anterior de asignar la operación a una variable.-->
+    También podemos hacerlo con «alert(multiplicar(3, 4));» en cuyo caso nos saltaremos el paso anterior de asignar la operación a una variable.-->
 
 
         <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO
@@ -80,6 +78,20 @@
         <!--3. 1 FUNCIÓN ANÓNIMA AUTODECLARADA-->
             <script>
                 (function () {alert("¡Hola, mundo!");}()); // pondremos entre paréntesis la función. No olvidar los paréntesis después de cerrar la llave de la función.
+            </script>
+
+
+    <!--4. FUNCIÓN FLECHA-->
+            <!--Ejemplos vistos anteriormente, ahora con funciones flecha-->
+            <script>
+                var saludar = nombre =>
+                   "¡Hola, " + nombre +"!";
+                alert(saludar("Jose"));
+            </script>
+
+            <script>
+                var multiplicar = (a, b) => a * b;
+                    alert(multiplicar(3, 5));
             </script>
 </body>
 </html>
