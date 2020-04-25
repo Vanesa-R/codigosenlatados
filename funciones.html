@@ -9,7 +9,7 @@
 
     <!--1. FUNCIÓN SIN PARÁMETROS-->
         <script> 
-            function saludar () { // Nombre de la función «saludar»
+            function saludar () { // Función «saludar»
             alert("¡Hola, mundo!");
             }
             saludar(); // Invocamos a la función
@@ -17,14 +17,15 @@
 
 
     <!--2. FUNCIÓN CON PARÁMETROS-->
-        <script> //Ejemplo anterior, pasando un nombre por parámetro
+        <script> // Añadimos el parámetro «nombre»
             function saludar (nombre){
-                return "¡Hola, " + nombre +"!";
+                return `Hola, ${nombre}!`; // Con ES6 esta opción es más recomendada que la siguiente línea 
+                //return "¡Hola, " + nombre +"!";
             }
             alert(saludar("Jose"));
         </script>
 
-        <script>//Otro ejemplo con datos numéricos
+        <script>// Otro ejemplo con datos numéricos
             function multiplicar (a, b){
                 return a * b;
             }
@@ -32,16 +33,8 @@
             alert (resultado);
         </script>
 
-    <!--Explicación paso a paso: 
-    La función «multiplicar» tiene dos parámetros: «a» y «b».
-    Utilizamos la palabra reservada «return» para que nos devuelva el dato.
-    Asignamos la operación a una variable, en este ejemplo «var resultado», donde ponemos entre paréntesis los argumentos.
-    Finalmente invocamos a la función con el nombre de la variable «resultado».
-    También podemos hacerlo con «alert(multiplicar(3, 4));» en cuyo caso nos saltaremos el paso anterior de asignar la operación a una variable.-->
-
-
         <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO
-        Si solo ponemos un argumento, el resultado daría NaN,resolvemos esto dando valor«0» al segundo parámetro cuando este no esté definido.-->
+        Si solo ponemos un argumento, el resultado daría NaN, resolvemos esto dando valor «0» al segundo parámetro cuando este no esté definido.-->
             <script>
                 function sumar (a, b){
                     if (b === undefined){
@@ -52,19 +45,25 @@
                 alert(sumar(4));
             </script>
 
-        
+            <script>// Esta opción de ECMAScript 6 es más recomendable
+                function sumar (a, b = 0){
+                    return a + b;
+                }
+                alert(sumar(4));
+            </script>
+
         <!--FUNCIÓN CON PARÁMETROS POR EXCESO
         En este caso, tendremos más argumentos de los que han sido declarados en los parámetros. Para mostrarlos usamos «arguments.length»-->
             <script>
                 function days (){
                     alert(arguments.length); //Obtendremos el número de argumentos
                     for (var i=0; i < arguments.length; i++){
-                    alert ("El argumento " + (i+1) + " es: " + arguments[i]);     
-                    } //Recorremos cada uno de los argumentos
+                        alert(`El argumento ${i} es ${arguments[i]}`);
+                        //alert("El argumento " + i + " es: " + arguments[i]);     
+                    }
                 }
                 days ("lunes", "martes", "jueves");
             </script>
-         
 
 
     <!--3. FUNCIÓN ANÓNIMA -->
@@ -85,7 +84,7 @@
             <!--Ejemplos vistos anteriormente, ahora con funciones flecha-->
             <script>
                 var saludar = nombre =>
-                   "¡Hola, " + nombre +"!";
+                   `¡Hola, ${nombre}!`;
                 alert(saludar("Jose"));
             </script>
 
