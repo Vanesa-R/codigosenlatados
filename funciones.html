@@ -17,24 +17,25 @@
 
 
     <!--2. FUNCIÓN CON PARÁMETROS-->
-        <script> // Añadimos el parámetro «nombre»
-            function saludar (nombre){
-                return `Hola, ${nombre}!`; // Con ES6 esta opción es más recomendada que la siguiente línea 
+        <script> 
+            function saludar (nombre){ // Añadimos el parámetro «nombre»
+                return `¡Hola, ${nombre}!`; // Opción recomendada en lugar de la siguiente línea 
                 //return "¡Hola, " + nombre +"!";
             }
             alert(saludar("Jose"));
         </script>
 
-        <script>// Otro ejemplo con datos numéricos
+        <script> // Otro ejemplo con datos numéricos
             function multiplicar (a, b){
                 return a * b;
             }
             var resultado = multiplicar (3, 4);
-            alert (resultado);
+            console.log(resultado);
         </script>
 
+
         <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO
-        Si solo ponemos un argumento, el resultado daría NaN, resolvemos esto dando valor «0» al segundo parámetro cuando este no esté definido.-->
+        Asignamos valor «0» al segundo parámetro cuando no definamos ese argumento, para evitar que el resultado sea NaN.-->
             <script>
                 function sumar (a, b){
                     if (b === undefined){
@@ -42,24 +43,35 @@
                     }
                     return a + b;
                 }
-                alert(sumar(4));
+                console.log(sumar(4));
             </script>
 
-            <script>// Esta opción de ECMAScript 6 es más recomendable
-                function sumar (a, b = 0){
+            <script>
+                function sumar (a, b = 0){ // Esta opción de ECMAScript 6 es más recomendable
                     return a + b;
                 }
-                alert(sumar(4));
+                console.log(sumar(4));
             </script>
 
-        <!--FUNCIÓN CON PARÁMETROS POR EXCESO
+
+            <!--2.2.1 FUNCIÓN CON PARÁMETRO REST
+            El ejemplo anterior es sencillo porque solo tenemos un parámetro por defecto. ¿Pero qué sucede cuando son muchos más? Para evitar tener que reeescribir constantemente una función para agregar parámetros, podemos utilizar el parámetro rest
+            -->
+            <script>
+                function persona (...datos){ // Con este parámetro ya podremos trabajar con todos los argumentos 
+                    console.log(datos);
+                }
+                persona("Vanesa", 34, "maquetadora");
+            </script>
+
+
+        <!--2. 2 FUNCIÓN CON PARÁMETROS POR EXCESO
         En este caso, tendremos más argumentos de los que han sido declarados en los parámetros. Para mostrarlos usamos «arguments.length»-->
             <script>
                 function days (){
-                    alert(arguments.length); //Obtendremos el número de argumentos
+                    console.log(arguments.length); //Obtendremos el número de argumentos
                     for (var i=0; i < arguments.length; i++){
-                        alert(`El argumento ${i} es ${arguments[i]}`);
-                        //alert("El argumento " + i + " es: " + arguments[i]);     
+                        console.log(`El argumento ${i} es ${arguments[i]}`);
                     }
                 }
                 days ("lunes", "martes", "jueves");
@@ -68,10 +80,10 @@
 
     <!--3. FUNCIÓN ANÓNIMA -->
         <script>
-            var restar = function (e, f){ // Definimos una variable para después poder invocar a la función
+            var restar = function (e, f){ // Definimos una variable para poder invocar a la función
                 return e - f;
             };
-            alert(restar(9, 4));
+            console.log(restar(9, 4));
         </script>
 
         <!--3. 1 FUNCIÓN ANÓNIMA AUTODECLARADA-->
@@ -90,7 +102,7 @@
 
             <script>
                 var multiplicar = (a, b) => a * b;
-                    alert(multiplicar(3, 5));
+                    console.log(multiplicar(3, 5));
             </script>
 </body>
 </html>
