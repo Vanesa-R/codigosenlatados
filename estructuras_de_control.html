@@ -11,21 +11,40 @@
         <!--1.1 IF / ELSE-->
             <script> 
                 function acceso () {
-                    var edad = prompt("Por favor, introduce tu edad");
+                    const edad = prompt("Por favor, introduce tu edad");
                         if (edad >= 18){
                             alert("¡Bienvenido!");
                         }
                         else {
-                            alert("Lo sentimos, debes tener 18 años para acceder a esta página")
+                            alert("Lo sentimos, debes tener 18 años para acceder a esta página");
                         }
                 }
                 acceso();
             </script>
+            <!--Con una FUNCIÓN FLECHA quedaría:
 
+                const acceso = edad => {
+                    edad = prompt("Por favor, introduce tu edad");
+                    if (edad >= 18){
+                        alert("¡Bienvenido!");
+                    }
+                    elfse {
+                        alert("Lo sentimos, debes tener 18 años para acceder a esta página");
+                    }
+                }
+                acceso ();
+
+            Para operaciones sencillas, recuerda que existe el OPERADOR TERNARIO, que nos facilitará la realización de estas operaciones:
+
+                const edad =  prompt("Por favor, introduce tu edad");
+                const acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 18 años para acceder a esta página";
+                alert(acceder);
+            -->   
+        
             <script>
-                var usuario = prompt("Introduce tu nombre de usuario");
+                const usuario = prompt("Introduce tu nombre de usuario");
                 if (usuario && usuario.trim()){
-                    var confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
+                    const confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
                     if (confirmar){
                         alert("El nombre de usuario es correcto");
                     } else {
@@ -35,18 +54,13 @@
                     alert("No has introducido ningún nombre");
                 }
             </script>
-        <!--Para operaciones sencillas, recuerda que existe el operador ternario, que nos facilitará la realización de estas operaciones: El primer ejemplo quedaría:
-        <script>
-            var edad =  prompt("Por favor, introduce tu edad");
-            var acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 18 años para acceder a esta página";
-            alert(acceder);        
-        </script>-->
+        
 
         <!--1.2 SWITCH
         Sentencia utilizada en casos de multiples condiciones.-->
             <script>
-              var note = 3;
-              var resultado = " ";
+              const note = 3;
+              let resultado = " ";
                 switch (note){
                     case 0:
                     case 1:
@@ -79,16 +93,16 @@
     <!-- 2. REPETICIONES-->
 
         <!--2.1 FOR-->
+            <!--Sintaxis-->
             <script>
-            // Explicación sencilla. 
-                for (var i=1; i<=10; i++){
+                for (let i=1; i<=10; i++){
                     console.log(i);
                 }
             </script>
-            
+            <!--Ejemplo-->
             <script>
-                var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
-                for (var i=0; i <books.length; i++){
+                const books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                for (let i=0; i <books.length; i++){
                     alert(books[i]);
                 }
             </script>
@@ -120,11 +134,11 @@
             <!--2.1.1 FOR IN
             Sentencia para movernos por un objeto-->
             <script>
-                var author = {name: "J. R. R. Tolkien", born: 1892, book: "The Hobbit"};
-                var propiedad;
+                const author = {name: "J. R. R. Tolkien", born: 1892, book: "The Hobbit"};
+                let propiedad;
                 for (propiedad in author) {
-                    alert(author[propiedad]);
-                } 
+                    console.log(author[propiedad]);
+                }
             </script>
 
             
@@ -145,7 +159,7 @@
             <script>
             /* Mientras que la contraseña introducida sea distinta a la contraseña guardada, nos mostrará un mensaje de contraseña incorrecta y requerirá introducir de nuevo la contraseña. Saldrá del bucle una vez la contraseña introducida sea la correcta.*/
 
-                var clave = "Abracadabra";
+                const clave = "Abracadabra";
                 var claveUser = prompt ("Escribe tu contraseña");
                     while
                         (clave != claveUser){
@@ -157,7 +171,6 @@
             </script>
 
                 <!--2.2.2 DO WHILE-->
-
                 
                 <script> // Mismo ejemplo que en «for» y «while»:
                     var i = 1;
