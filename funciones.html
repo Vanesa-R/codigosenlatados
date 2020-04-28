@@ -29,7 +29,7 @@
             function multiplicar (a, b){
                 return a * b;
             }
-            var resultado = multiplicar (3, 4);
+            const resultado = multiplicar (3, 4);
             console.log(resultado);
         </script>
 
@@ -86,23 +86,26 @@
             console.log(restar(9, 4));
         </script>
 
-        <!--3. 1 FUNCIÓN ANÓNIMA AUTODECLARADA-->
+        <!--3. 1 FUNCIÓN ANÓNIMA AUTOINVOCADA-->
             <script>
-                (function () {alert("¡Hola, mundo!");}()); // pondremos entre paréntesis la función. No olvidar los paréntesis después de cerrar la llave de la función.
+                (function () {alert("¡Hola, mundo!");}()); // pondremos entre paréntesis la función. No olvidar los paréntesis para invocar a la función.
             </script>
 
 
     <!--4. FUNCIÓN FLECHA-->
             <!--Ejemplos vistos anteriormente, ahora con funciones flecha-->
-            <script>
-                var saludar = nombre =>
-                   `¡Hola, ${nombre}!`;
+            <script> 
+                const saludar = nombre => `¡Hola, ${nombre}!`; 
                 alert(saludar("Jose"));
             </script>
 
             <script>
-                var multiplicar = (a, b) => a * b;
+                const multiplicar = (a, b) => a * b;
                     console.log(multiplicar(3, 5));
+            </script>
+
+            <script>
+                (() => alert(`Hola, mundo`))();
             </script>
 </body>
 </html>
