@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y herencia</title>
+</head>
+<body>
+    <!--CLASES
+        Permiten organizar nuestro código, separando las variables y funciones que estén relacionadas.-->
+        <script>
+            class Usuario { // Clase
+                constructor (name, address, years){ // Método con parámetros
+                    this.name = name, // Propiedad
+                    this.address = address,
+                    this.years = years
+                }
+            
+                mostrarInfo (){
+                    return `
+                        Nombre: ${this.name}
+                        Dirección: ${this.address}
+                        Edad: ${this.years}
+                    `;
+                }
+            }
+            let vanesa = new Usuario("Vanesa", "Mengano, 79", 34); // Instancia
+            console.log(vanesa.mostrarInfo());
+        </script>
+
+    <!--HERENCIA
+        Permiten heredar las propiedades de otras clases.
+
+        Por ejemplo, podemos tener la clase «usuario» de una página, que al mismo tiempo sea alumno de un curso. Compartirá las anteriores propiedades de «usuario», y además podrá tener propiedades propias de la clase «alumno»-->
+        <script>
+            class Usuario {
+                constructor (name, address, years){
+                    this.name = name,
+                    this.address = address,
+                    this.years = years
+                }
+            }
+            class Alumno extends Usuario {
+                constructor(name, address, years, course){
+                    super(name, address, years) // Propiedades de Usuario
+                    this.course = course
+                }
+                mostrarInfo (){
+                    return `
+                        Nombre: ${this.name}
+                        Dirección: ${this.address}
+                        Edad: ${this.years}
+                        Curso: ${this.course}
+                    `;
+                }
+            }
+            let vanesa = new Alumno("Vanesa", "Mengano, 79", 34, "React"); // Instancia
+            document.write(vanesa.mostrarInfo());
+        </script>
+</body>
+</html>
