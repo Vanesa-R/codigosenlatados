@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios DOM</title>
+</head>
+<body>
+    <h1>Lorem ipsum</h1>
+    <ol id="lista">
+        <li>Lorem ipsum dolor sit amet consectetur adipiscing elit nisi molestie augue netus elementum malesuada,</li>
+        <li>quisque phasellus inceptos ante sapien blandit tempor diam justo duis eleifend senectus.</li>
+        <li>Venenatis urna proin netus euismod arcu torquent gravida nisi,</li>
+        <li>pellentesque auctor hendrerit odio rutrum montes vestibulum inceptos ridiculus, at vivamus ut platea laoreet libero aenean.</li>
+    </ol>
+    <h1>Lorem ipsum</h1>
+        <p>Condimentum tellus nibh facilisi ultrices sagittis feugiat penatibus neque porta lobortis leo duis, egestas taciti tempor commodo ridiculus cum ornare convallis integer sapien tempus platea dui, congue malesuada et sociis magnis nascetur aliquam class ultricies vivamus odio. Fringilla posuere rhoncus sociosqu torquent platea maecenas ante purus, donec tortor suscipit porta laoreet praesent leo non, suspendisse mi curae mauris aliquet feugiat lacus.
+        </p>
+        <p id="parrafo"></p>
+    <script>
+        
+     //Añadiendo un párrafo con contenido:
+        var elemento = document.createElement("p"),
+           contenido = document.createTextNode("Proin congue nibh libero mauris quam ridiculus, facilisis ultricies eu habitant et ligula semper, nisl justo montes inceptos orci. Scelerisque duis felis quam vel eget congue nostra litora cubilia, eros facilisi ultrices vulputate hendrerit arcu vehicula natoque nulla, rhoncus neque ultricies mauris viverra ante gravida potenti.");
+        elemento.appendChild(contenido);
+        document.getElementById("parrafo").appendChild(elemento);
+
+        //Añadiendo un elemento en una lista (final)
+        var elemento2 = document.createElement("li"),
+            contenido2 = document.createTextNode ("Condimentum tellus nibh facilisi ultrices sagittis feugiat"),
+            padre = document.getElementById("lista");
+        elemento2.appendChild(contenido2);
+        padre.appendChild(elemento2);
+
+        //Añadiendo un elemento en otra posición (primera u otra) de la lista
+       var elemento3 = document.createElement("li"),
+            contenido3 = document.createTextNode("Proin congue nibh libero mauris quam ridiculus,"),
+            padre2 = document.getElementsByTagName("li")[0].parentNode,
+            primerElemento = document.getElementsByTagName("li")[2];
+        elemento3.appendChild(contenido3);
+        padre2.insertBefore(elemento3, primerElemento);
+    </script>
+</body>
+</html>
+
+

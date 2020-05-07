@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <h1>Modelo de eventos</h1>
+    <h3>Modelo del W3Schools</h3>
+    <p id="mensaje">Bienvenido</p>
+
+    <h3>Modelo de Microcoft</h3>
+    <p id="mensaje2">Bienvenido</p>
+    <script>
+        document.getElementById("mensaje").addEventListener("click", saludo, false);
+
+        function saludo() {
+            alert("¡Disfruta de tu experiencia en nuestra página!");
+        }
+    </script>
+
+    <script>
+        document.getElementById("mensaje2").attachEvent("onclick", saludo2);
+
+        function saludo2(){
+            alert("¡Disfruta de tu experiencia en nuestra página!");
+        }
+    </script>
+
+</body>
+</html>
