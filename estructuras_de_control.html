@@ -9,82 +9,89 @@
     <!--1. CONDICIONALES-->
 
         <!--1.1 IF / ELSE-->
-            <script> 
-                function acceso () {
-                    const edad = prompt("Por favor, introduce tu edad");
-                        if (edad >= 18){
-                            alert("¡Bienvenido!");
-                        }
-                        else {
-                            alert("Lo sentimos, debes tener 18 años para acceder a esta página");
-                        }
-                }
-                acceso();
-            </script>
-            <!--Con una FUNCIÓN FLECHA quedaría:
-
-                const acceso = edad => {
-                    edad = prompt("Por favor, introduce tu edad");
+        <script> // Ejercicio: Solicitar edad. Acceso mayores de edad.
+            function acceso () {
+                const edad = prompt("Por favor, introduce tu edad");
                     if (edad >= 18){
                         alert("¡Bienvenido!");
                     }
-                    elfse {
+                    else {
                         alert("Lo sentimos, debes tener 18 años para acceder a esta página");
                     }
-                }
-                acceso ();
+            }
+            acceso();
+        </script>
 
-            Para operaciones sencillas, recuerda que existe el OPERADOR TERNARIO, que nos facilitará la realización de estas operaciones:
-
-                const edad =  prompt("Por favor, introduce tu edad");
-                const acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 18 años para acceder a esta página";
-                alert(acceder);
-            -->   
-        
-            <script>
-                const usuario = prompt("Introduce tu nombre de usuario");
-                if (usuario && usuario.trim()){
-                    const confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
-                    if (confirmar){
-                        alert("El nombre de usuario es correcto");
-                    } else {
-                        alert("El nombre de usuario es incorrecto");
-                    }
+        <script> // Ejercicio: Validar nombre de usuario.
+            const usuario = prompt("Introduce tu nombre de usuario");
+            if (usuario && usuario.trim()){
+                const confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
+                if (confirmar){
+                    alert("El nombre de usuario es correcto");
                 } else {
-                    alert("No has introducido ningún nombre");
+                    alert("El nombre de usuario es incorrecto");
                 }
-            </script>
-        
+            } else {
+                alert("No has introducido ningún nombre");
+            }
+        </script>
 
-        <!--1.2 SWITCH
-        Sentencia utilizada en casos de multiples condiciones.-->
+        <!--Primer ejercicio con FUNCIÓN FLECHA:-->
+        <script>
+            const acceso = edad => {
+                edad = prompt("Por favor, introduce tu edad");
+                if (edad >= 18){
+                    alert("¡Vienvenido!");
+                }
+                else {
+                    alert("Lo sentimos, debes tener 18 años para acceder a esta página");
+                }
+            }
+            acceso();
+        </script>
+        
+        <!--Primer ejercicio con OPERADOR TERNARIO -->
+        <script>
+            const edad = prompt("Por favor, introduce tu edad");
+            const acceder = (edad >= 18) ? "Bienvenido" : "Lo sentimos, debes tener 19 años para acceder a esta página";
+            alert(acceder);
+        </script>
+        
+            <!--Otro ejemplo con operador ternario-->
             <script>
-              const note = 3;
-              let resultado = " ";
-                switch (note){
-                    case 0:
-                    case 1:
-                    case 2:
-                    case 3:
-                    case 4:
-                        resultado = "Lo sentimos, has suspendido";
+                let num = 5;
+                (num % 2 == 0) ? console.log("El número es par") : console.log("El número es impar"); 
+                // Devuelve por consola «El número es impar»
+            </script>
+
+        <!--1.2 SWITCH - Sentencia utilizada en casos de multiples condiciones.-->
+            <script>
+                let figura = prompt("Introduce una figura para calcular su área. \n Elige entre triángulo, rectángulo y círculo.");
+                let b, h, r, a, resultado;
+
+                switch (figura){
+                    case "triangulo":
+                    case "triángulo":
+                        b = parseInt(prompt("Introduce la base"));
+                        h = parseInt(prompt("Introduce la altura"));
+                        a = ((b*h)/2);
+                        resultado = `El área del triángulo es ${a}`;
                         break;
-                    case 5:
-                        resultado = "Suficiente";
+                    case "rectangulo":
+                    case "rectángulo":
+                        b = parseInt(prompt("Introduce la base"));
+                        h = parseInt(prompt("Introduce la altura"));
+                        a = b*h;
+                        resultado = `El área del rectángulo es ${a}`;
                         break;
-                    case 6:
-                        resultado = "Bien";
-                        break;
-                    case 7:
-                    case 8:
-                        resultado = "Notable";
-                        break;
-                    case 9:
-                    case 10:
-                        resultado = "Sobresaliente";
+                    case "circulo":
+                    case "círculo":
+                        r = parseInt(prompt("Introduce el radio"));
+                        a = ((Math.PI)*(Math.pow(r, 2)));
+                        resultado = `El área del círculo es ${(a.toFixed(2))}`;
                         break;
                     default:
-                        resultado = "La nota indicada no es correcta";
+                        resultado = `Introduce una figura válida`;
                 }
                 alert(resultado);
             </script>
@@ -92,14 +99,13 @@
 
     <!-- 2. REPETICIONES-->
 
-        <!--2.1 FOR-->
-            <!--Sintaxis-->
+        <!--2.1 FOR - Bucle determinado-->
             <script>
                 for (let i=1; i<=10; i++){
                     console.log(i);
                 }
             </script>
-            <!--Ejemplo-->
+
             <script>
                 const books = ["Dune", "Dracula", "American Gods", "Hyperion"];
                 for (let i=0; i <books.length; i++){
@@ -108,15 +114,15 @@
             </script>
             <!--Es importante no olvidar ninguna de las tres sentencias, dentro del bucle for o fuera cada una de ellas tiene que aparecer: 
                 1. Inicializando la variable con un valor fuera del bucle:
-                    var i = 0;
-                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    let i = 0;
+                    let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
                     for ( ;<books.length; i++){
                         alert(books[i]);
                     }
 
                 2. Hasta cuándo tiene que recorrer el bucle
-                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
-                    for (var i=0; ; i++){
+                    let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    for (let i=0; ; i++){
                         if (i == books.length){
                             break;
                         }
@@ -124,17 +130,43 @@
                     }
                 
                 3. Sentencia para incrementar la variable fuera del bucle for
-                    var books = ["Dune", "Dracula", "American Gods", "Hyperion"];
-                    for (var i=0; i <books.length; ){
+                    let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                    for (let i=0; i <books.length; ){
                         alert(books[i]);
                         i++;
                     } -->
                 
          
-            <!--2.1.1 FOR IN
-            Sentencia para movernos por un objeto-->
+            <!--2.1.1 FOR OF
+            Sentencia para recorrer un array-->
             <script>
-                const author = {name: "J. R. R. Tolkien", born: 1892, book: "The Hobbit"};
+                let colors = ["violeta", "azul", "verde", "naranja", "amarillo"];
+                for (color of colors) {
+                    console.log(color);
+                }
+            </script>
+            
+            <script> // Ejercicio: Solicitar palabra y mostrar el número de consonantes, vocales y letras en total
+                let palabra = prompt("Introduce una palabra");
+                let letras = palabra.length;
+                let vocal = 0;
+                let consonante = 0;
+
+                for (letra of palabra){
+                  if (letra == "a" || letra == "e" || letra == "i" || letra == "o" || letra == "u"){
+                    vocal ++;
+                   } else {
+                     consonante++;
+                    } 
+                }
+                console.log(`La palabra «${palabra}» tiene ${letras} letras: ${vocal} vocales y ${consonante} consonantes`);
+            </script>
+            
+            
+            <!--2.1.2 FOR IN
+            Sentencia más indicada para recorrer un objeto-->
+            <script>
+                let author = {name: "J. R. R. Tolkien", born: 1892, book: "The Hobbit"};
                 let propiedad;
                 for (propiedad in author) {
                     console.log(author[propiedad]);
@@ -142,25 +174,23 @@
             </script>
 
             
-        <!--2.2 WHILE
-        Se ejecutará hasta que la condición deje de ser cierta. Es necesario incluir por tanto una condición para salir del bucle o este será infinito-->
-
+        <!--2.2 WHILE - Bucle indeterminado.
+        Se ejecutará hasta que la condición deje de ser cierta. Es necesario incluir una condición para salir del bucle o este será infinito-->
+        
             <script>
-            /* Ejemplo idéntico al visto con la sentencia «for».
-            Mientras «i» sea menor o igual que diez mostrará por consola el contador, que va incrementándose en uno en cada iteración (no olvidar la incrementación del contador o el bucle será infinito).*/
-
-                var i = 1;
+                let i = 1;
                 while (i <= 10){
                     console.log(i);
                     i++;
                 }
+            /* Mientras «i» sea menor o igual que diez mostrará por consola el contador, que irá
+            incrementándose en uno en cada iteración (no olvidar la incrementación del contador o
+            bucle será infinito).*/
             </script>
 
             <script>
-            /* Mientras que la contraseña introducida sea distinta a la contraseña guardada, nos mostrará un mensaje de contraseña incorrecta y requerirá introducir de nuevo la contraseña. Saldrá del bucle una vez la contraseña introducida sea la correcta.*/
-
                 const clave = "Abracadabra";
-                var claveUser = prompt ("Escribe tu contraseña");
+                let claveUser = prompt ("Escribe tu contraseña");
                     while
                         (clave != claveUser){
                             alert("Contraseña incorrecta");
@@ -168,12 +198,13 @@
                         }
                     (clave == claveUser);
                     alert("Bienvenido");
+            /* Mientras la contraseña introducida sea distinta a la contraseña guardada, nmostrará un mensaje de «Contraseña incorrecta» y requerirá introducir de nuevo la contraseña. Saldrá del bucle una vez la contraseña introducida sea la correcta.*/
             </script>
 
-                <!--2.2.2 DO WHILE-->
-                
-                <script> // Mismo ejemplo que en «for» y «while»:
-                    var i = 1;
+                <!--2.2.2 DO WHILE
+                La diferencia entre While y Do While es que en este caso la condición se va a ejecutar una vez mínimo, mientras que en While si la condición no se cumple el código no se ejecuta -->           
+                <script>
+                    let i = 1;
                     do {
                         console.log(i);
                         i++;

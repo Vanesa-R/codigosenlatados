@@ -7,26 +7,31 @@
 </head>
 <body>
     <h1>Modelo de eventos</h1>
-    <h3>Modelo del W3Schools</h3>
-    <p id="mensaje">Bienvenido</p>
+    <!--Modelo de W·Schools. 
+    No soportado por versiones anteriores de IE. Es el modelo recomendado
+    Algunos eventos más utilizados son: click, focus, change,  onload, mouseover, submit, resize-->
+    <h3>Modelo de W3Schools</h3>
+    <input type="button" id="btn-saludo" value="Conectar">
 
-    <h3>Modelo de Microcoft</h3>
+    <!--Modelos de Microsoft. 
+    Creado exclusivamente para su navegador-->
+    <h3>Modelo de Microsoft</h3>
     <p id="mensaje2">Bienvenido</p>
-    <script>
-        document.getElementById("mensaje").addEventListener("click", saludo, false);
 
-        function saludo() {
-            alert("¡Disfruta de tu experiencia en nuestra página!");
+    <!--SCRIPTS-->
+    <script>
+        document.getElementById("btn-saludo").addEventListener("click", saludo, false);
+        function saludo (){
+            alert("¡Bienvenido de nuevo!");
         }
     </script>
 
     <script>
         document.getElementById("mensaje2").attachEvent("onclick", saludo2);
-
         function saludo2(){
             alert("¡Disfruta de tu experiencia en nuestra página!");
         }
     </script>
-
+ 
 </body>
 </html>

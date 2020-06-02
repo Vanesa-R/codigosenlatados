@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Ejercicios DOM</title>
+</head>
+<body>
+    <h1>Ejercicios Document Object Model</h1>
+    <section class="ejercicio_uno">
+        <h2>Lorem ipsum</h2>
+        <p>Condimentum tellus nibh facilisi ultrices sagittis feugiat penatibus neque porta lobortis leo duis, egestas taciti tempor commodo ridiculus cum ornare convallis integer sapien tempus platea dui, congue malesuada et sociis magnis nascetur aliquam class ultricies vivamus odio. Fringilla posuere rhoncus sociosqu torquent platea maecenas ante purus, donec tortor suscipit porta laoreet praesent leo non, suspendisse mi curae mauris aliquet feugiat lacus.</p>
+        <p id="parrafo"></p>
+    </section>
+    <section class="ejercicio_dos">
+        <h2>Cras at congue eros</h2>
+        <ol id="lista">
+            <li>Lorem ipsum dolor sit amet consectetur adipiscing elit nisi molestie augue netus elementum malesuada</li>
+            <li>Quisque phasellus inceptos ante sapien blandit tempor diam justo duis eleifend senectus</li>
+            <li>Venenatis urna proin netus euismod arcu torquent gravida nisi</li>
+            <li>Pellentesque auctor hendrerit odio rutrum montes vestibulum inceptos ridiculus, at vivamus ut platea laoreet libero aenean</li>
+        </ol>
+    </section>
+
+    <script src="ejercicio1.js"></script>
+    <script src="ejercicio2.js"></script>
+    
+</body>
+</html>
+
+
+//MODIFICAR NODOS
+primerElemento.innerHTML = "Nuevo texto <i>del item</i>"; //Con esto accedemos a todos nuestro código HTML y puede ejecutarlo (etiquetas semánticas)
+primerElemento.textContent = "Nuevo texto del item"; 
+
+//MODIFICAR ESTILOS
+var encabezado = document.getElementById("encabezado");
+    encabezado.style
+    elemento.setAttribute("align", "center"); //Añadimos atributos
+
