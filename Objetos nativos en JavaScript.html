@@ -85,7 +85,7 @@
 
         <!--2. NÚMERO-->
         <script>
-            let year = new Number(); // No se recomienda su uso. Ejecución lenta
+            let year = new Number(); // No se recomienda su uso.
 
             let year = 34; // Se recomienda utilizar el dato primitivo de tipo número.
         </script>
@@ -108,33 +108,65 @@
         </script>
 
 
-        <!--3. Booleanos-->
+        <!--3. BOOLEANOS-->
         <script>
-            var education = new Boolean(); //No se recomienda su uso
+            let education = new Boolean(); // No se recomienda su uso
 
             const education = true; // Se recomienda utilizar el dato primitivo de tipo boolean
         </script>
        
 
-        <!--4. Arrays-->
+        <!--4. ARRAYS-->
         <script>
-            var mes = new Array (); // No se recomienda su uso
+            let month = new Array (); // No se recomienda su uso
 
-            const mes = ["enero", "febrero", "marzo", "abril"] // Podemos almacenar números, booleanos… es suficiente con crear un array declarando una variable y almacenar los valores entre corchetes.
+            const month = ["enero", "febrero", "marzo", "abril"] // Podemos almacenar números, booleanos… es suficiente con crear un array declarando una variable y almacenar los valores entre corchetes.
         </script>
 
-        <!--Métodos útiles:
-            1. forEach: Para recorrer un array.
-            2. Find -->
+        <!--Propiedades y métodos útiles:-->
         <script>
-            // Ejemplo con forEach
-            const colores = ["naranja", "verde", "violeta", "amarillo"];
-            colores.forEach(function(e){
+            let colors = ["naranja", "verde", "violeta", "amarillo"];
+
+            // length: Propiedad que devuelve el número de posiciones del array
+            console.log(colors.length); // Devuelve «4»
+
+            // Array.isArray: Evalua si la variable es un array
+            console.log(Array.isArray(colors)); // Devuelve «true»
+
+            // shift: Eliminar el primer elemento del array
+            // pop: Eliminar el último elemento del array
+            colors.pop(); // Devuelve y elimina del array «amarillo»
+
+            // unshift: Añade un elemento al principio del array
+            // push: Añade un elemento al final del array
+            colors.push("rojo"); // Añade «rojo» al final del array «colores»
+
+            // indexOf: Primer índice del elemento que coincida con el valor indicado
+            // lastIndexOf, por el contrario, devuelve el último
+            colors.indexOf("verde"); // Devuelve «1»
+
+            // reverse: Invierte el orden de los elementos
+            colors.reverse(); // Devuelve «(4) ["amarillo", "violeta", "verde", "naranja"]»
+
+            // join: Separador, devuelve el string con el separador que indiquemos (por defecto: comas sin espacio)
+            colors.join(); // Devuelve «naranja,verde,violeta,amarillo»
+            colors.join(", "); // Devuelve «naranja, verde, violeta, amarillo»
+
+            // splice: Cambia contenido del array. Elimina el contenido que indicamos y añade nuevo contenido
+            colors.splice(0, 2, "rojo", "azul"); // Devuelve  «["rojo", "azul", "violeta", "amarillo"]» Se posiciona en el indicador a (0), y modifica hasta el indicador b (2), añadiendo el nuevo contenido.
+            colors.splice(2, 0, "naranja"); // Devuelve «["rojo", "azul", "naranja", "violeta", "amarillo"]» pues si el indicador b es cero no elimina nada
+
+            // slice: Extrae elementos de un array desde el indicador a al b.
+            colors = ["rojo", "azul", "naranja", "violeta", "amarillo"];
+            colors.slice(2,3); // Devuelve «naranja»
+
+            // forEach: Recorrer array
+            colors.forEach(function(e){
                 console.log(e);
             });
 
-            //Ejemplo con find
-            console.log(colores.find (color => color.length > 7)); //Devuelve «amarillo»
+            //Find
+            console.log(colors.find (color => color.length > 7)); //Devuelve «amarillo»
             
             /*El método find recibe una función de tipo flecha, que ha sido optimizada para mejorar su legibilidad. 
             Para ver más claramente el ejemplo sin nociones de este tipo de funciones:
@@ -148,21 +180,21 @@
 
     
 
-        <!--5. Date-->
+        <!--5. DATE-->
         <script>
             let fecha = new Date();
         </script>
         
 
-        <!--6. Math
+        <!--6. MATH
         Utilizado para operaciones matemásticas más complejas.
-        No es un constructor, por lo tanto no se define con new-->
+        No es un constructor, por lo tanto no se define con new. Es un objeto estático.-->
         <script>
             const pi = Math.PI;
             console.log(`El número PI es ${pi}`); // Devuelve «El número PI es 3.141592653589793»
         </script>
 
-        <!--Propiedades: E, LN2, LN12, LOG2E, LOG10E, PI, SQRT1_2, SORT2.-->
+        <!--Propiedades: E (constante de Euler), PI, LN2, LN12, LOG2E, LOG10E, SQRT1_2, SORT2.-->
 
         <!--Métodos útiles: -->
         <script>
@@ -170,8 +202,8 @@
                 num2 = 6.11;
 
             // Max y min 
-            Math.max(2,5,9,3,0); //Devuelve 9
-            Math.min(2,5,9,3,0); //Devuelve 0
+            Math.max(2,5,9,3,0); // Devuelve 9
+            Math.min(2,5,9,3,0); // Devuelve 0
 
             // Round: Redondeo al alza o baja
             Math.round(num1); // Devuelve 12
@@ -186,8 +218,13 @@
             // sqrt: Devuelve la raíz del número
             Math.sqrt(36); // Devuelve 6
 
-            // pow: Devuelve la potencia
-                        
+            // pow: Devuelve la potencia al pasar dos números (base y exponente)
+            Math.pow(2, 3); // Devuelve 8
+            
+            // random: Número aleatorio
+            Math.round(Math.random()*100); // Devuelve un número entre 0 y 100. Con round evitamos decimales
+            Math.round(Math.random()* (15-5)+5); // Devuelve un número sin decimales entre 5 y 15
+
             // Abs: Devuelve el valor absoluto
         </script>
 
