@@ -8,35 +8,63 @@
 <body>
 
     <!--1. FUNCIÓN SIN PARÁMETROS-->
-        <script> 
-            function saludar () { // Función «saludar»
+        <script>
+        // ECMAScript6:
+
+            const saludar = () => alert("¡Hola, mundo!"); // Función «saludar»
+            saludar(); // Invocamos a la función
+        
+
+       // Podemos seguir encontrando funciones con esta sintaxis
+            function saludar () {
             alert("¡Hola, mundo!");
             }
-            saludar(); // Invocamos a la función
+            saludar();
         </script>
 
 
     <!--2. FUNCIÓN CON PARÁMETROS-->
+
         <script> 
-            function saludar (nombre){ // Añadimos el parámetro «nombre»
-                return `¡Hola, ${nombre}!`; // Opción recomendada en lugar de la siguiente línea 
-                //return "¡Hola, " + nombre +"!";
+        // ECMAScript6:
+            const saludar = nombre => `¡Hola, ${nombre}!`; // Añadimos el parámetro «nombre»
+            alert(saludar("Jose"));
+        
+
+        // Podemos seguir encontrando funciones con esta sintaxis
+            function saludar (nombre){
+                return `¡Hola, ${nombre}!`;
             }
             alert(saludar("Jose"));
         </script>
 
-        <script> // Otro ejemplo con datos numéricos
+        <!--Otro ejemplo con datos de tipo número-->
+
+        <script> 
+        // ECMAScript6:
+
+            const multiplicar = (a, b) => a * b; // Si hay más de un parámetro se escriben entre paréntesis
+                console.log(multiplicar(3, 5));
+        
+        
+        // Podemos seguir encontrando funciones con esta sintaxis
             function multiplicar (a, b){
                 return a * b;
             }
-            const resultado = multiplicar (3, 4);
-            console.log(resultado);
+            console.log(multiplicar(3,5));
         </script>
 
 
-        <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO
-        Asignamos valor «0» al segundo parámetro cuando no definamos ese argumento, para evitar que el resultado sea NaN.-->
-            <script>
+        <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO -->
+
+            <script> 
+            // ECMAScript6:
+
+                const sumar = (a, b = 0) => a + b; //  Asignamos valor «0» al segundo parámetro cuando no definamos ese argumento
+                console.log(sumar(4));
+            
+            
+            // Podemos seguir encontrando funciones con esta sintaxis
                 function sumar (a, b){
                     if (b === undefined){
                         b = 0;
@@ -46,17 +74,9 @@
                 console.log(sumar(4));
             </script>
 
-            <script>
-                function sumar (a, b = 0){ // Esta opción de ECMAScript 6 es más recomendable
-                    return a + b;
-                }
-                console.log(sumar(4));
-            </script>
-
-
+            
             <!--2.2.1 FUNCIÓN CON PARÁMETRO REST
-            El ejemplo anterior es sencillo porque solo tenemos un parámetro por defecto. ¿Pero qué sucede cuando son muchos más? Para evitar tener que reeescribir constantemente una función para agregar parámetros, podemos utilizar el parámetro rest
-            -->
+            El ejemplo anterior es sencillo porque solo tenemos un parámetro por defecto. ¿Pero qué sucede cuando son muchos más? Para evitar tener que reeescribir constantemente una función para agregar parámetros, podemos utilizar el parámetro rest -->
             <script>
                 function persona (...datos){ // Con este parámetro ya podremos trabajar con todos los argumentos 
                     console.log(datos);
@@ -66,10 +86,12 @@
 
 
         <!--2. 2 FUNCIÓN CON PARÁMETROS POR EXCESO
-        En este caso, tendremos más argumentos de los que han sido declarados en los parámetros. Para mostrarlos usamos «arguments.length»-->
+        En este caso, tendremos más argumentos de los que han sido declarados en los parámetros. Para obtenerlos usamos «arguments.length»-->
+
+            
             <script>
                 function days (){
-                    console.log(arguments.length); //Obtendremos el número de argumentos
+                    console.log(arguments.length);
                     for (var i=0; i < arguments.length; i++){
                         console.log(`El argumento ${i} es ${arguments[i]}`);
                     }
@@ -80,32 +102,22 @@
 
     <!--3. FUNCIÓN ANÓNIMA -->
         <script>
-            var restar = function (e, f){ // Definimos una variable para poder invocar a la función
+            // Podemos encontrar funciones con esta sintaxis:
+            const restar = function (e, f){
                 return e - f;
             };
             console.log(restar(9, 4));
         </script>
 
-        <!--3. 1 FUNCIÓN ANÓNIMA AUTOINVOCADA-->
-            <script>
-                (function () {alert("¡Hola, mundo!");}()); // pondremos entre paréntesis la función. No olvidar los paréntesis para invocar a la función.
-            </script>
+        <!--3. 1 FUNCIÓN ANÓNIMA AUTOINVOCADA
+        Pondremos entre paréntesis la función. No olvidar los paréntesis para invocarla-->
 
-
-    <!--4. FUNCIÓN FLECHA-->
-            <!--Ejemplos vistos anteriormente, ahora con funciones flecha-->
-            <script> 
-                const saludar = nombre => `¡Hola, ${nombre}!`; 
-                alert(saludar("Jose"));
-            </script>
-
-            <script>
-                const multiplicar = (a, b) => a * b;
-                    console.log(multiplicar(3, 5));
-            </script>
-
-            <script>
+            <script> // ECMAScript6:
                 (() => alert(`Hola, mundo`))();
+            </script>
+
+            <script> // Sintaxis anterior:
+                (function () {alert("¡Hola, mundo!");}());
             </script>
 </body>
 </html>
