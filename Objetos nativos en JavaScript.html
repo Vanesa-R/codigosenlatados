@@ -7,15 +7,33 @@
     <title>Objetos en JavaScript</title>
 </head>
 <body>
-    <!--DEFINIENDO UN OBJETO-->
-    <!--Definir y crear un objeto con un literal -->
+
+    <!--DEFINIENDO UN OBJETO
+    Definir y crear un objeto con un literal -->
     <script>
         const author = { 
             name: "Lewis Carroll",
             book: "Alice's Adventures in Wonderland",
             fphrase: "Alice was beginning to get very tired of sitting by her sister on the bank"
         };
+        console.log(author.name); // Devuelve «Lewis Carroll»
     </script>
+
+    <!--IMPRIMIENDO UN OBJETO
+    En el ejemplo anterior accedemos al objeto mediante el punto. Veamos casos más complejos -->
+    <script> // Ejemplo con un array dentro del objeto
+        const author = { 
+            name: "Lewis Carroll",
+            book: "Alice's Adventures in Wonderland",
+            editions: ["anotada", "completa", "ilustrada", "infantil"]
+        };
+        for (propiedad in author){
+            console.log(`La propiedad «${propiedad}» tiene el valor: ${(author[propiedad])}`);
+        } 
+        /* Si queremos que solo nos devuelva los valores: console.log(author[propiedad]);
+           Si queremos que solo nos devuelva las propiedades: console.log(propiedad);
+    </script>
+
 
     <!--DESESTRUCTURANDO UN OBJETO-->
     <script>
@@ -25,7 +43,8 @@
             fphrase: "Alice was beginning to get very tired of sitting by her sister on the bank"
         };
 
-        const {name, book, fphrase, awards = "No se ha especificado"} = author; // Trabajando con desestructuración de objetos y parámetros por defecto
+        const {name, book, fphrase, awards = "No se ha especificado"} = author;
+        // Trabajando con desestructuración de objetos y parámetros por defecto
 
         console.log(book); //Devuelve «Alice's Adventures in Wonderland»
         console.log(awards); //Devuelve «No se ha especificado»
@@ -83,11 +102,11 @@
         </script>
 
 
-        <!--2. NÚMERO-->
+        <!--2. NÚMEROS -->
         <script>
-            let year = new Number(); // No se recomienda su uso.
+            let year = new Number(); // No se recomienda su uso
 
-            let year = 34; // Se recomienda utilizar el dato primitivo de tipo número.
+            let year = 34; // Se recomienda utilizar el dato primitivo de tipo número
         </script>
         
         <!--Propiedades: Constructor, prototype, max value, min value, negative infinity, positive infinity y NaN. -->
@@ -112,7 +131,7 @@
         <script>
             let education = new Boolean(); // No se recomienda su uso
 
-            const education = true; // Se recomienda utilizar el dato primitivo de tipo boolean
+            const education = true; // Se recomienda el dato primitivo de tipo boolean
         </script>
        
 
@@ -177,8 +196,6 @@
             */
         </script>
         
-
-    
 
         <!--5. DATE-->
         <script>
