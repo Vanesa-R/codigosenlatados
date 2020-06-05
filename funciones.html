@@ -9,12 +9,10 @@
 
     <!--1. FUNCIÓN SIN PARÁMETROS-->
         <script>
-        // ECMAScript6:
-
+        // Desde ECMAScript6:
             const saludar = () => alert("¡Hola, mundo!"); // Función «saludar»
             saludar(); // Invocamos a la función
         
-
        // Podemos seguir encontrando funciones con esta sintaxis
             function saludar () {
             alert("¡Hola, mundo!");
@@ -25,11 +23,10 @@
 
     <!--2. FUNCIÓN CON PARÁMETROS-->
 
-        <script> 
-        // ECMAScript6:
+        <script>
+        // Desde ECMAScript6:
             const saludar = nombre => `¡Hola, ${nombre}!`; // Añadimos el parámetro «nombre»
             alert(saludar("Jose"));
-        
 
         // Podemos seguir encontrando funciones con esta sintaxis
             function saludar (nombre){
@@ -41,11 +38,9 @@
         <!--Otro ejemplo con datos de tipo número-->
 
         <script> 
-        // ECMAScript6:
-
-            const multiplicar = (a, b) => a * b; // Si hay más de un parámetro se escriben entre paréntesis
+        // Desde ECMAScript6:
+            const multiplicar = (a, b) => a * b; // Si hay más de un parámetro: entre paréntesis
                 console.log(multiplicar(3, 5));
-        
         
         // Podemos seguir encontrando funciones con esta sintaxis
             function multiplicar (a, b){
@@ -58,11 +53,9 @@
         <!-- 2.1 FUNCIÓN CON PARÁMETROS POR DEFECTO -->
 
             <script> 
-            // ECMAScript6:
-
+            // Desde ECMAScript6:
                 const sumar = (a, b = 0) => a + b; //  Asignamos valor «0» al segundo parámetro cuando no definamos ese argumento
                 console.log(sumar(4));
-            
             
             // Podemos seguir encontrando funciones con esta sintaxis
                 function sumar (a, b){
