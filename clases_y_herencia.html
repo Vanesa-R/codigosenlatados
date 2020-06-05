@@ -7,11 +7,11 @@
 </head>
 <body>
     <!--CLASES
-        Permiten organizar nuestro código, separando las variables y funciones que estén relacionadas.-->
+        Permiten organizar nuestro código, separando las variables y funciones que estén relacionadas-->
         <script>
             class Usuario { // Clase
                 constructor (name, address, years){ // Método con parámetros
-                    this.name = name, // Propiedad
+                    this.name = name, // Propiedades
                     this.address = address,
                     this.years = years
                 }
@@ -24,8 +24,11 @@
                     `;
                 }
             }
-            let vanesa = new Usuario("Vanesa", "Mengano, 79", 34); // Instancia
+            const vanesa = new Usuario("Vanesa", "Mengano, 79", 34); // Instanciar objeto
             console.log(vanesa.mostrarInfo());
+            
+            /* Si queremos acceder a una propiedad los haremos con 
+            console.log(vanesa.name), que devolverá "Vanesa"
         </script>
 
     <!--HERENCIA
@@ -42,8 +45,8 @@
             }
             class Alumno extends Usuario {
                 constructor(name, address, years, course){
-                    super(name, address, years) // Propiedades de Usuario
-                    this.course = course
+                    super(name, address, years) // Propiedades de Usuario que hereda
+                    this.course = course // Propiedad de Alumno
                 }
                 mostrarInfo (){
                     return `
@@ -54,7 +57,7 @@
                     `;
                 }
             }
-            let vanesa = new Alumno("Vanesa", "Mengano, 79", 34, "React"); // Instancia
+            const vanesa = new Alumno("Vanesa", "Mengano, 79", 34, "React"); // Instancia
             document.write(vanesa.mostrarInfo());
         </script>
 </body>
