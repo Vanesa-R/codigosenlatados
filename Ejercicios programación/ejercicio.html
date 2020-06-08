@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Clases</title>
+</head>
+<body>
+<script>
+
+/* Crea una clase libro con las propiedades: título, autor, año y género.
+Solicita mediante prompt tres libros y guárdalos en un array.
+Valida que los campos no se queden vacíos, que el campo año sea un número compuesto de cuatro dígitos, y que el género sea de aventuras, terror o fantasía.
+Crea una función que muestre los libros; otra que muestre los autores ordenados alfabéticamente, y otra que pida un género y muestre la información de los libros que pertenezcan a ese género usando el método que devuelve la información.*/
+
+    // Clase Libro y sus propiedades
+    class Book {
+        constructor(title, author, year, genre){
+            this.title = title,
+            this.author = author,
+            this.year = year,
+            this.genre = genre
+        }
+        bookInfo (){
+            return `
+            Título: ${this.title}
+            Autor: ${this.author}
+            Año de publicación: ${this.year}
+            Género: ${this.genre}
+            `
+        }
+    }
+    // Array
+    let books = [];
+
+    while (books.length <3){ // Validación de datos solicitados
+        let title = prompt("Introduce un título");
+        let author = prompt("Introduce su autor");
+        let year = parseInt(prompt("Introduce el año de su publicación"));
+        let genre = prompt("Introduce el género del libro").toLowerCase;
+
+        if (title != "" 
+            && author != ""
+            && !isNaN(year) && year.length == 4 
+            && (genre == "fantasia" || "terror" || "aventuras")) {
+
+                books.push(new Book(title, author, year, genre));
+            }  
+    }
+
+    // Función que muestra los libros
+    const showBooks = () => console.log(books);
+    // Función que muestra los autores
+
+</script>    
+</body>
+</html>
