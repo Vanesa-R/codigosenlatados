@@ -10,3 +10,4 @@ En cada número deberá aparecer un mensaje de si es par o impar.
 
 5. Solicitar un color y evaluar si este ha sido introducido previamente en un array de colores
 
+6. Solicitar tres números y ordenarlos de menor a mayor.
