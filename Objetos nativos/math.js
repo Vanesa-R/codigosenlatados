@@ -1,7 +1,7 @@
 /* 6. MATH
     Utilizado para operaciones matemásticas más complejas.
-    No es un constructor, por lo tanto no se define con new. Es un objeto estático. */
-            
+    No es un constructor, por lo tanto no se define con new. Es un objeto estático. *
+
     const pi = Math.PI;
     console.log(`El número PI es ${pi}`); // Devuelve «El número PI es 3.141592653589793»
 
@@ -13,7 +13,7 @@
     const num1 = 11.86,
         num2 = 6.11;
 
-    // Max y min 
+    // Max y min
     Math.max(2,5,9,3,0); // Devuelve 9
     Math.min(2,5,9,3,0); // Devuelve 0
 
@@ -37,4 +37,4 @@
     Math.round(Math.random()*100); // Devuelve un número entre 0 y 100. Con round evitamos decimales
     Math.round(Math.random()* (15-5)+5); // Devuelve un número sin decimales entre 5 y 15
     
-    // Abs: Devuelve el valor absoluto
+    // Abs: Devuelve el valor absoluto del número que pasemos
