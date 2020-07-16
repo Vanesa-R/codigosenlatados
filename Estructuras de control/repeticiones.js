@@ -9,10 +9,10 @@
         }
 
         // 
-        const books = ["Dune", "Dracula", "American Gods", "Hyperion"];
-            for (let i=0; i <books.length; i++){
-                alert(books[i]);
-            }
+        let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+        for (let i=0; i < books.length; i++){
+            console.log(`La posición ${i} tiene el valor de ${books[i]}`)
+        }
 
         /* Es importante no olvidar ninguna de las tres sentencias, dentro del bucle for o fuera cada una de ellas tiene que aparecer:
             1.  Sentencia inicializando la variable con un valor fuera del bucle:
@@ -41,9 +41,11 @@
         /* 1.1.1 FOR OF
             Sentencia para recorrer un array */
 
-                let colors = ["violeta", "azul", "verde", "naranja", "amarillo"];
-                for (color of colors) {
-                    console.log(color);
+                let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
+                for(book of books){
+                    console.log(book) // Muestra los valores del array
+                    /* console.log(`La posición ${books.indexOf(book)} tiene el valor de ${book}`); 
+                    Podemos obtener el índice con indexOF aunque en este caso es más adecuado utilizar el For in */            
                 }
             
             
@@ -71,22 +73,28 @@
             
             // Ejemplo: Mientras la contraseña introducida sea distinta a la contraseña guardada, nmostrará un mensaje de «Contraseña incorrecta» y requerirá introducir de nuevo la contraseña. Saldrá del bucle una vez la contraseña introducida sea la correcta
 
-                const clave = "Abracadabra";
+                const clave = "abracadabra";
                 let claveUser = prompt ("Escribe tu contraseña");
                     while
-                        (clave != claveUser){
+                        (claveUser != clave){
                             alert("Contraseña incorrecta");
                             claveUser = prompt ("Escribe tu contraseña");
                         }
-                    (clave == claveUser);
+                    (claveUser == clave);
                     alert("Bienvenido");
     
 
         /* 1.2.1 DO WHILE
-            La diferencia entre While y Do While es que en este caso la condición se va a ejecutar una vez mínimo, mientras que en While si la condición no se cumple el código no se ejecuta */
+            La diferencia entre While y Do While es que en este
+             caso la condición se va a ejecutar una vez mínimo, mientras que en While si la condición no se cumple el código no se ejecuta */
 
                 let i = 1;
                 do {
                     console.log(i);
                     i++;
                 } while (i <= 10);
+    
+/* 
+    Palabras reservadas para los bucles
+    break: Rompe el bucle.
+    continue: Salta las indicaciones que demos en el código a ejecutar. */
