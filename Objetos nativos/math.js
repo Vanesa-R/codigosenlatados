@@ -37,4 +37,4 @@
     Math.round(Math.random()*100); // Devuelve un número entre 0 y 100. Con round evitamos decimales
     Math.round(Math.random()* (15-5)+5); // Devuelve un número sin decimales entre 5 y 15
     
-    // Abs: Devuelve el valor absoluto del número que pasemos
+    // Abs: Devuelve el valor absoluto del número que pasamos
