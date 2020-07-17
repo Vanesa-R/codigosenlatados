@@ -10,7 +10,7 @@
 
         // 
         let books = ["Dune", "Dracula", "American Gods", "Hyperion"];
-        for (let i=0; i <books.length; i++){
+        for (let i=0; i < books.length; i++){
             console.log(`La posición ${i} tiene el valor de ${books[i]}`)
         }
 
@@ -93,3 +93,8 @@
                     console.log(i);
                     i++;
                 } while (i <= 10);
+    
+/* 
+    Palabras reservadas para los bucles
+    break: Rompe el bucle.
+    continue: Salta las indicaciones que demos en el código a ejecutar. */
