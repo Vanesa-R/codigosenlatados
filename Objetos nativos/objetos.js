@@ -9,20 +9,23 @@
         console.log(author.name); // Devuelve «Lewis Carroll»
 
 
+
 /* IMPRIMIENDO UN OBJETO
     En el ejemplo anterior accedemos al objeto con el punto. Veamos casos más complejos */
     
     // Ejemplo con un array dentro del objeto
+
         const author = { 
             name: "Lewis Carroll",
             book: "Alice's Adventures in Wonderland",
             editions: ["anotada", "completa", "ilustrada", "infantil"]
         };
-        for (propiedad in author){
-            console.log(`La propiedad «${propiedad}» tiene el valor: ${(author[propiedad])}`);
+        for (let key in author){
+            console.log(`La propiedad «${key}» tiene el valor: ${(author[key])}`);
         } 
-    /* Si queremos que solo nos devuelva los valores: console.log(author[propiedad]);
+    /* Si queremos que solo nos devuelva los valores: console.log(author[key]);
        Si queremos que solo nos devuelva las propiedades: console.log(propiedad); */
+
 
 
 // DESESTRUCTURANDO UN OBJETO
