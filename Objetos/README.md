@@ -1,6 +1,6 @@
 # Objetos en JavaScript
 
-## Instanciar, imprimir y desestructurar un objeto
+## Definir, Instanciar y desestructurar un objeto
 [Leer introducción a los objetos](https://github.com/Vanesa-R/javascript/blob/master/Objetos%20nativos/objetos.js)
 
 ## Tipos de objetos
