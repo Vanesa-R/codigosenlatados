@@ -1,5 +1,5 @@
-/* DEFINIENDO UN OBJETO
-    Definir y crear un objeto con un literal */
+/* INSTANCIANDO UN OBJETO
+    Crear un objeto con un literal */
 
     const author = { 
         name: "Lewis Carroll",
