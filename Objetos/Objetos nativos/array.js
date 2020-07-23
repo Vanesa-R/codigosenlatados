@@ -9,11 +9,17 @@
 
     let colors = ["naranja", "verde", "violeta", "amarillo"];
 
+    // Array.isArray: Evalua si la variable es un array
+    console.log(Array.isArray(colors)); // Devuelve «true»
+
     // length: Propiedad que devuelve el número de posiciones del array
     console.log(colors.length); // Devuelve «4»
 
-    // Array.isArray: Evalua si la variable es un array
-    console.log(Array.isArray(colors)); // Devuelve «true»
+    // concat: Concatenar arrays
+    let colors2 = ["azul", "morado"];
+    console.log(colors.concat(colors2)); // Devuelve «"naranja", "verde", "violeta", "amarillo", "azul", "morado»
+    // También podemos concatenar arrays con spread operator:
+    console.log([...colors, ...colors2]); // Devuelve «"naranja", "verde", "violeta", "amarillo", "azul", "morado»
 
     // shift: Eliminar el primer elemento del array
     // pop: Eliminar el último elemento del array
