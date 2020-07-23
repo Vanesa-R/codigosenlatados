@@ -54,12 +54,12 @@
 
             
         /* 2.2.1 FUNCIÓN CON PARÁMETRO REST
-        El ejemplo anterior es sencillo porque solo tenemos un parámetro por defecto. ¿Pero qué sucede cuando son muchos más? Para evitar tener que reeescribir constantemente una función para agregar parámetros, podemos utilizar el parámetro rest */
+        El ejemplo anterior es sencillo porque solo tenemos un parámetro por defecto. ¿Pero qué sucede cuando el número de parámetros es indefinido? 
+        Para evitar tener que reeescribir constantemente una función para agregar parámetros, podemos utilizar el parámetro rest */
 
-            function persona (...datos){
-                    console.log(datos);
-                }
-                persona("Vanesa", 34, "maquetadora");
+            const persona = (...datos) => console.log(datos);
+            persona("Vanesa", 34, "desarrolladora frontend");
+
 
 
     // 2. 2 FUNCIÓN CON PARÁMETROS POR EXCESO
