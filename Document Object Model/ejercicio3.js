@@ -1,9 +1,9 @@
-/* Ejercicio 2: AÑADIENDO ELEMENTOS A UNA LISTA
+/* Ejercicio 3: AÑADIENDO ELEMENTOS A UNA LISTA
 
 (En la posición final)*/
 let elementoDos = document.createElement("li"), // Crear elemento «li»
     contenidoDos = document.createTextNode ("Condimentum tellus nibh facilisi ultrices sagittis feugiat"),
-    contenedor = document.getElementById("lista"); // Ubicamos el contenedor padre
+    contenedor = document.getElementById("list"); // Ubicamos el contenedor padre
 
 elementoDos.appendChild(contenidoDos);
 elementoDos.style.color = "violet"; // Añadimos estilos para resaltar en el ejercicio el nuevo elemento creado
