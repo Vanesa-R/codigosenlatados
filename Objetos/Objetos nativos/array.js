@@ -53,12 +53,12 @@
     console.log(colors.sort()); // Devuelve «["amarillo", "azul", "naranja", "rojo", "violeta"]»
 
     // forEach: Recorrer array
-    colors.forEach(e => console.log(e));
+    colors.forEach(el => console.log(el));
     /* El método forEach recibe una función de tipo flecha. Para ver claramente el ejemplo sin nociones 
     de este tipo de funciones:
 
-        colors.forEach(function(e){
-            console.log(e);
+        colors.forEach(function(el){
+            console.log(el);
         }); */
    
     // find
