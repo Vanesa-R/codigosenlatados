@@ -8,6 +8,7 @@ name.getAttribute("type"); // Devuelve «text»
 /* element.setAttribute 
 Asigna un valor nuevo al atributo*/
 name.setAttribute("type", "tel"); // Modifica «text» por «tel»
+name.setAttribute("type", "text");
 
 /* element.classList.add
 Se utiliza para añadir una clase */
