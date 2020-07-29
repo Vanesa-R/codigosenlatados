@@ -1,8 +1,9 @@
 // PARTE 5: TRAVERSING
 
+let parent = document.getElementById("list");
+
 /* parentNode
 Devuelve el padre de un elemento */
-let parent = document.getElementById("list");
 console.log(parent.parentNode); // Devuelve «secction class="main-list"»
 console.log(parent.parentNode.parentNode); // Devuelve «main class="main"»
 
@@ -16,7 +17,7 @@ console.log(parent.firstElementChild); // Devuelve el primer elemento «li-item�
 
 /* lastElementChild
 Devuelve el último elemento hijo */
-console.log.(parent.lastElementChild); // Devuelve el último elemento «li-item»
+console.log(parent.lastElementChild); // Devuelve el último elemento «li-item»
 
 /* hasChildrenNodes
 Método que nos devuelve «true» o «false» dependiendo de si el nodo tiene nodos hijo */
