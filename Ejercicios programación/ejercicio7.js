@@ -1,4 +1,5 @@
-/* Ejercicio propuesto por Dorian Desing en el curso de Udemy de JavaScript https://www.udemy.com/course/curso-de-javascript-2020 */
+/* Ejercicio propuesto por Dorian Desing en el curso de Udemy de JavaScript 
+https://www.udemy.com/course/curso-de-javascript-2020 */
 
 class Book {
     constructor(title, author, year, genre){
