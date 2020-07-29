@@ -8,15 +8,15 @@
 </head>
 <body>
     <header class="header">
-        <h1 id="title">Ejercicios Document Object Model</h1>
+        <h1 id="title">Document Object Model</h1>
     </header>
     <main class="main">
-        <section class="parrafos">
+        <section class="main-paragraphs">
             <h2>Añadiendo un nuevo párrafo</h2>
             <p>Condimentum tellus nibh facilisi ultrices sagittis feugiat penatibus neque porta lobortis leo duis, egestas taciti tempor commodo ridiculus cum ornare convallis integer sapien tempus platea dui, congue malesuada et sociis magnis nascetur aliquam class ultricies vivamus odio. Fringilla posuere rhoncus sociosqu torquent platea maecenas ante purus, donec tortor suscipit porta laoreet praesent leo non, suspendisse mi curae mauris aliquet feugiat lacus.</p>
             <p id="paragraph"></p>
         </section>
-        <section class="lista">
+        <section class="main-list">
             <h2>Añadiendo elementos a una lista</h2>
             <ol id="list">
                 <li class="list-item">Lorem ipsum dolor sit amet consectetur adipiscing elit nisi molestie augue netus elementum malesuada</li>
@@ -25,16 +25,19 @@
                 <li class="list-item">Pellentesque auctor hendrerit odio rutrum montes vestibulum inceptos ridiculus, at vivamus ut platea laoreet libero aenean</li>
             </ol>
         </section>
-        <section class="formulario">
+        <section class="main-inputs">
             <h2>Modificando atributos. Eventos</h2>
             <form>
                 <label for="name"></label>
                 <input type="text" id="name" placeholder="Nombre">
                 <input type="button" id="btn-saludo" value="Saludar">
             </form>
+            <h2>Añadiendo elementos a un select</h2>
+                <ul id="provinceList"></ul>
+                <select id="provinceSelect"></select>
         </section>
     </main>
-    <script src="acceso_nodos.js"></script>
+    <script src="acceder_nodos.js"></script>
     <script src="modificar_nodos.js"></script>
     <script src="eventos.js"></script>
     <script src="crear_nodos.js"></script>
