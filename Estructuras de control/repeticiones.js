@@ -14,7 +14,7 @@
             console.log(`La posición ${i} tiene el valor de ${books[i]}`)
         }
 
-        /* Es importante no olvidar ninguna de las tres sentencias, dentro del bucle for o fuera cada una de ellas tiene que aparecer:
+        /* Es importante no olvidar ninguna de las tres sentencias. Dentro del bucle for o fuera cada una de ellas tiene que aparecer:
             1.  Sentencia inicializando la variable con un valor fuera del bucle:
                 let i = 0;
                 let books = ["Dune", "Dracula", "American Gods", "Hyperion"];

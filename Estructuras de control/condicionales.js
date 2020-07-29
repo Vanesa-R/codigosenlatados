@@ -4,6 +4,20 @@
         
         // Ejercicio: Solicitar edad. Dar acceso a los mayores de edad
 
+        // Con sintaxis ECMAScript 6:
+        const acceso = edad => {
+            edad = prompt("Por favor, introduce tu edad");
+            if (edad >= 18){
+                alert("¡Vienvenido!");
+            }
+            else {
+                alert("Lo sentimos, debes tener 18 años para acceder a esta página");
+            }
+        }
+        acceso();
+
+        // Podemos seguir encontrando funciones con esta sintaxis
+
             function acceso () {
                 const edad = prompt("Por favor, introduce tu edad");
                     if (edad >= 18){
@@ -12,18 +26,6 @@
                     else {
                         alert("Lo sentimos, debes tener 18 años para acceder a esta página");
                     }
-            }
-            acceso();
-
-            // Con sintaxis ECMAScript 6:
-            const acceso = edad => {
-                edad = prompt("Por favor, introduce tu edad");
-                if (edad >= 18){
-                    alert("¡Vienvenido!");
-                }
-                else {
-                    alert("Lo sentimos, debes tener 18 años para acceder a esta página");
-                }
             }
             acceso();
 
