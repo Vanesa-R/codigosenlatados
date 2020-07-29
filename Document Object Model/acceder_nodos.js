@@ -14,4 +14,4 @@ const title2 = document.querySelector("#title"); // Accede al h1 con id «title�
 
 /* document.querySelectorAll */
 const item2 = document.querySelectorAll(".list-item"); // Accede a todos los elementos li con clase «list-item». Al ser un selector CSS necesitamos poner «.»
-const listaItem = Array.from(document.querySelectorAll(".list-item")) // Si queremos tratar los elementos como un array debemos poner «Array.from»
+const listItem = Array.from(document.querySelectorAll(".list-item")) // Si queremos tratar los elementos como un array debemos poner «Array.from»
