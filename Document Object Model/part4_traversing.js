@@ -1,4 +1,4 @@
-// PARTE 5: TRAVERSING
+// PARTE 4: TRAVERSING
 
 let parent = document.getElementById("list");
 
