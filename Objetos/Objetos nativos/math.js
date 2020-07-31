@@ -1,6 +1,6 @@
-/* 6. MATH
+/* 5. MATH
     Utilizado para operaciones matemásticas más complejas.
-    No es un constructor, por lo tanto no se define con new. Es un objeto estático. *
+    No es un constructor, por lo tanto no se define con new. Es un objeto estático. */
 
     const pi = Math.PI;
     console.log(`El número PI es ${pi}`); // Devuelve «El número PI es 3.141592653589793»
