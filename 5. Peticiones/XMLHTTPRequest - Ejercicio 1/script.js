@@ -8,6 +8,7 @@ btn.addEventListener("click", () => {
     } else {
         xhr = new ActiveXObject("Microsoft.XMLHTTP");
     }
+    
     xhr.open("GET", "https://jsonplaceholder.typicode.com/users");
     
     xhr.addEventListener("load", (data) => {
