@@ -8,8 +8,8 @@ btn.addEventListener("click", () => {
     })
     .then(res => {
         const fragment = document.createDocumentFragment();
-        if(list.textContent === ""){
-            for  (const key of res.data){
+        if (list.textContent === ""){
+            for (const key of res.data){
                 const listItem = document.createElement("li");
                 listItem.classList.add("list-item");
                 listItem.textContent = `${key.name} - ${key.email}`;
@@ -18,5 +18,5 @@ btn.addEventListener("click", () => {
             list.appendChild(fragment);
         }
     })
-    .catch(err => console.log(err))
+    .cath(err => console.log(err))
 })
