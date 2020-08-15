@@ -16,6 +16,9 @@ btn.addEventListener("click", () => {
             "Content-type": "application/json; charset=utf-8"
         }
     })
-    .then(response => response.json())
-    .then(response => console.log(response))
+    .then(res => res.json())
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
 })
+
+// res: response (respuesta)

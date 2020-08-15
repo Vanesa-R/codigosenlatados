@@ -19,7 +19,7 @@ btn.addEventListener("click", () => {
                 list.appendChild(fragment);
             }
         })
-        .catch(error => console.log(`${error}`));
+        .catch(err => console.log(err);
 })
 
 // res = Response (respuesta)
