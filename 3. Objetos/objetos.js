@@ -40,3 +40,8 @@
 
     console.log(book); //Devuelve «Alice's Adventures in Wonderland»
     console.log(awards); //Devuelve «No se ha especificado»
+
+    /* Podemos cambiar el nombre de las claves:
+    const {name: nombre, book, fpprase} = author
+    consol.log(nombre) // Devuelve “Lewis Carroll» 
+    */
