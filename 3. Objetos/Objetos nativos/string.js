@@ -1,6 +1,6 @@
 // 1. STRING
         
-    let name = new String (); // No se recomienda su uso
+    // let name = new String (); // No se recomienda su uso
 
     const name = "Vanesa"; // Se recomienda utilizar el dato primitivo de tipo cadena
     const profesion = 'maquetadora frontend';

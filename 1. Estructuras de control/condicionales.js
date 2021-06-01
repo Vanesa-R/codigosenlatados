@@ -8,7 +8,7 @@
         const acceso = edad => {
             edad = prompt("Por favor, introduce tu edad");
             if (edad >= 18){
-                alert("¡Vienvenido!");
+                alert("¡Bienvenido!");
             }
             else {
                 alert("Lo sentimos, debes tener 18 años para acceder a esta página");
@@ -34,7 +34,7 @@
 
             const usuario = prompt("Introduce tu nombre de usuario");
             if (usuario && usuario.trim()){
-                const confirmar = confirm("¿Es " + usuario + " tu nombre de usuario?");
+                const confirmar = confirm(`¿Es ${usuario} tu nombre de usuario?`);
                 if (confirmar){
                     alert("El nombre de usuario es correcto");
                 } else {
